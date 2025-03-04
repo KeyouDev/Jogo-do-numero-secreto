@@ -4,6 +4,7 @@ let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
 function exibirTextoNaTela(tag, texto) {
+    
     let campo = document.querySelector(tag);
     if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(texto);
@@ -12,8 +13,8 @@ function exibirTextoNaTela(tag, texto) {
         window.speechSynthesis.speak(utterance);
 } else {
     console.log("Web Speech API não suportada neste navegador.");
-}
-    campo.innerHTML = texto;
+}      campo.innerHTML = texto;
+    
 }
 
 function exibirMensagemInicial() {
